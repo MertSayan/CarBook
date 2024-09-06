@@ -6,4 +6,33 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Banner\NewFolder1\" />
+    <Folder Include="Features\Banner\NewFolder2\" />
+    <Folder Include="Features\Banner\NewFolder3\" />
+    <Folder Include="Features\Banner\NewFolder\" />
+    <Folder Include="Features\Brand\NewFolder1\" />
+    <Folder Include="Features\Brand\NewFolder2\" />
+    <Folder Include="Features\Brand\NewFolder3\" />
+    <Folder Include="Features\Brand\NewFolder\" />
+    <Folder Include="Features\Car\" />
+    <Folder Include="Features\CarDescription\" />
+    <Folder Include="Features\CarFeature\" />
+    <Folder Include="Features\CarPricing\" />
+    <Folder Include="Features\Category\" />
+    <Folder Include="Features\Contact\" />
+    <Folder Include="Features\Entity\" />
+    <Folder Include="Features\Feature\" />
+    <Folder Include="Features\FooterAdress\" />
+    <Folder Include="Features\Testimonial\" />
+    <Folder Include="Features\Services\" />
+    <Folder Include="Features\SocialMedia\" />
+    <Folder Include="Features\NewFolder4\" />
+    <Folder Include="Features\Location\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CarBook.Domain\CarBook.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
