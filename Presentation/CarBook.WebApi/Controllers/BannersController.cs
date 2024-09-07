@@ -40,7 +40,7 @@ namespace CarBook.WebApi.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetBanner(int id)
         {
-            var value = await _getBannerByIdQueryHandler.Handle(new GetBannerByIdQuery(id));
+            var value = await _getBannerByIdQueryHandler.Handle(new GetCarByIdQuery(id));
             return Ok(value);
         }
         [HttpPost]

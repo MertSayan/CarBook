@@ -17,7 +17,7 @@ namespace CarBook.Application.Features.Banners.Handlers.Read
         {
         }
 
-        public async Task<GetBannerByIdQueryResult> Handle(GetBannerByIdQuery query)
+        public async Task<GetBannerByIdQueryResult> Handle(GetCarByIdQuery query)
         {
             var value=await _repository.GetByIdAsync(query.Id);
             return new GetBannerByIdQueryResult

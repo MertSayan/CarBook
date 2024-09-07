@@ -7,11 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Brand\NewFolder1\" />
-    <Folder Include="Features\Brand\NewFolder2\" />
-    <Folder Include="Features\Brand\NewFolder3\" />
-    <Folder Include="Features\Brand\NewFolder\" />
-    <Folder Include="Features\Car\" />
     <Folder Include="Features\CarDescription\" />
     <Folder Include="Features\CarFeature\" />
     <Folder Include="Features\CarPricing\" />

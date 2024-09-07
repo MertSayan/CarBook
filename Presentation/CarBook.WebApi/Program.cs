@@ -4,6 +4,10 @@ using CarBook.Application.Features.Abouts.Handlers.Read;
 using CarBook.Application.Features.Abouts.Handlers.Write;
 using CarBook.Application.Features.Banners.Handlers.Read;
 using CarBook.Application.Features.Banners.Handlers.Write;
+using CarBook.Application.Features.Brands.Handlers.Read;
+using CarBook.Application.Features.Brands.Handlers.Write;
+using CarBook.Application.Features.Cars.Handlers.Read;
+using CarBook.Application.Features.Cars.Handlers.Write;
 using CarBook.Application.Interfaces;
 using CarBook.Persistence.Context;
 using CarBook.Persistence.Repositories;
@@ -32,6 +36,20 @@ namespace CarBook.WebApi
             builder.Services.AddScoped<CreateBannerCommandHandler>();
             builder.Services.AddScoped<UpdateBannerCommandHandler>();
             builder.Services.AddScoped<RemoveBannerCommandHandler>();
+
+            builder.Services.AddScoped<GetBrandByIdQueryHandler>();
+            builder.Services.AddScoped<GetBrandQueryHandler>();
+            builder.Services.AddScoped<CreateBrandCommendHandler>();
+            builder.Services.AddScoped<UpdateBrandCommendHandler>();
+            builder.Services.AddScoped<RemoveBrandCommendHandler>();
+
+            builder.Services.AddScoped<GetCarByIdQueryHandler>();
+            builder.Services.AddScoped<GetCarQueryHandler>();
+            builder.Services.AddScoped<CreateCarCommandHandler>();
+            builder.Services.AddScoped<UpdateCarCommandHandler>();
+            builder.Services.AddScoped<RemoveCarCommendHandler>();
+
+
 
             //builder.Services.AddScoped(typeof(BaseHandler<>));
 
