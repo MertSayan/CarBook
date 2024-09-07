@@ -2,6 +2,8 @@
 using CarBook.Application.BaseHandler;
 using CarBook.Application.Features.Abouts.Handlers.Read;
 using CarBook.Application.Features.Abouts.Handlers.Write;
+using CarBook.Application.Features.Banners.Handlers.Read;
+using CarBook.Application.Features.Banners.Handlers.Write;
 using CarBook.Application.Interfaces;
 using CarBook.Persistence.Context;
 using CarBook.Persistence.Repositories;
@@ -24,6 +26,13 @@ namespace CarBook.WebApi
             builder.Services.AddScoped<CreateAboutCommendHandler>();
             builder.Services.AddScoped<UpdateAboutCommandHandler>();
             builder.Services.AddScoped<RemoveAboutCommandHandler>();
+
+            builder.Services.AddScoped<GetBannerByIdQueryHandler>();
+            builder.Services.AddScoped<GetBannerQueryHandler>();
+            builder.Services.AddScoped<CreateBannerCommandHandler>();
+            builder.Services.AddScoped<UpdateBannerCommandHandler>();
+            builder.Services.AddScoped<RemoveBannerCommandHandler>();
+
             //builder.Services.AddScoped(typeof(BaseHandler<>));
 
 
