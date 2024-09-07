@@ -9,8 +9,10 @@ using CarBook.Application.Features.Brands.Handlers.Write;
 using CarBook.Application.Features.Cars.Handlers.Read;
 using CarBook.Application.Features.Cars.Handlers.Write;
 using CarBook.Application.Interfaces;
+using CarBook.Application.Interfaces.CarInterfaces;
 using CarBook.Persistence.Context;
 using CarBook.Persistence.Repositories;
+using CarBook.Persistence.Repositories.CarRepositories;
 
 namespace CarBook.WebApi
 {
@@ -23,6 +25,7 @@ namespace CarBook.WebApi
             // Add services to the container.
             builder.Services.AddScoped<CarBookContext>();
             builder.Services.AddScoped(typeof(IRepository<>),typeof(Repository<>)); 
+            builder.Services.AddScoped(typeof(ICarRepository),typeof(CarRepository)); 
 
 
             builder.Services.AddScoped<GetAboutQueryHandler>();
@@ -48,6 +51,8 @@ namespace CarBook.WebApi
             builder.Services.AddScoped<CreateCarCommandHandler>();
             builder.Services.AddScoped<UpdateCarCommandHandler>();
             builder.Services.AddScoped<RemoveCarCommendHandler>();
+
+            builder.Services.AddScoped<GetCarWithBrandQueryHandler>();
 
 
 
