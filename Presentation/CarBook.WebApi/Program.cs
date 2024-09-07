@@ -8,6 +8,8 @@ using CarBook.Application.Features.Brands.Handlers.Read;
 using CarBook.Application.Features.Brands.Handlers.Write;
 using CarBook.Application.Features.Cars.Handlers.Read;
 using CarBook.Application.Features.Cars.Handlers.Write;
+using CarBook.Application.Features.Categories.Handlers.Read;
+using CarBook.Application.Features.Categories.Handlers.Write;
 using CarBook.Application.Interfaces;
 using CarBook.Application.Interfaces.CarInterfaces;
 using CarBook.Persistence.Context;
@@ -53,6 +55,14 @@ namespace CarBook.WebApi
             builder.Services.AddScoped<RemoveCarCommendHandler>();
 
             builder.Services.AddScoped<GetCarWithBrandQueryHandler>();
+
+            builder.Services.AddScoped<GetCategoryByIdQueryHandler>();
+            builder.Services.AddScoped<GetCategoryQueryHandler>();
+            builder.Services.AddScoped<CreateCategoryCommandHandler>();
+            builder.Services.AddScoped<UpdateCategoryCommandHandler>();
+            builder.Services.AddScoped<RemoveCategoryCommandHandler>();
+
+
 
 
 
