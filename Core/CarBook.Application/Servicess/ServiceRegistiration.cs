@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarBook.Application.Services
+namespace CarBook.Application.Servicess
 {
     public static class ServiceRegistiration
     {

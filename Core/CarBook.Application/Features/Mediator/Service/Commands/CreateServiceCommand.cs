@@ -1,19 +1,16 @@
-﻿using System;
+﻿using MediatR;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarBook.Domain.Entities
+namespace CarBook.Application.Features.Mediator.Service.Commands
 {
-    public class Services : Entity
-    {
-        [Key]
-        public int ServiceId { get; set; }
+    public class CreateServiceCommand:IRequest
+    { 
         public string Title { get; set; }
         public string Description { get; set; }
         public string IconUrl { get; set; }
-
     }
 }
