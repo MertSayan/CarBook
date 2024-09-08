@@ -10,7 +10,6 @@
     <Folder Include="Features\CarDescription\" />
     <Folder Include="Features\CarFeature\" />
     <Folder Include="Features\CarPricing\" />
-    <Folder Include="Features\Contact\" />
     <Folder Include="Features\Entity\" />
     <Folder Include="Features\Feature\" />
     <Folder Include="Features\FooterAdress\" />

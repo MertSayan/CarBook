@@ -17,10 +17,10 @@ namespace CarBook.Application.Features.Categories.Handlers.Read
         {
         }
 
-        public async Task<GetCategoryByIdResult> Handle(GetCategoryByIdQuery query)
+        public async Task<GetCategoryByIdQueryResult> Handle(GetCategoryByIdQuery query)
         {
             var value = await _repository.GetByIdAsync(query.Id);
-            return new GetCategoryByIdResult
+            return new GetCategoryByIdQueryResult
             {
                 CategoryId = value.CategoryId,
                 Name=value.Name

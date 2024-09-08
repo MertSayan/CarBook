@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CarBook.Application.Features.Categories.Results
 {
-    public class GetCategoryResult
+    public class GetCategoryByIdQueryResult
     {
         public int CategoryId { get; set; }
         public string Name { get; set; }

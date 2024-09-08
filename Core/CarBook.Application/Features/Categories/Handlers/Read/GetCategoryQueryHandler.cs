@@ -16,10 +16,10 @@ namespace CarBook.Application.Features.Categories.Handlers.Read
         {
         }
 
-        public async Task<List<GetCategoryResult>> Handle()
+        public async Task<List<GetCategoryQueryResult>> Handle()
         {
             var values= await _repository.GetAllAsync();
-            return values.Select(x=> new GetCategoryResult
+            return values.Select(x=> new GetCategoryQueryResult
             {
                 Name = x.Name,
                 CategoryId = x.CategoryId,

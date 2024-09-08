@@ -28,6 +28,7 @@ namespace CarBook.Application.Features.Cars.Handlers.Write
             value.Luggage= command.Luggage;
             value.Model= command.Model;
             value.Seat= command.Seat;
+            await _repository.UpdateAsync(value);
         }
     }
 }

@@ -10,6 +10,8 @@ using CarBook.Application.Features.Cars.Handlers.Read;
 using CarBook.Application.Features.Cars.Handlers.Write;
 using CarBook.Application.Features.Categories.Handlers.Read;
 using CarBook.Application.Features.Categories.Handlers.Write;
+using CarBook.Application.Features.Contacts.Handlers.Read;
+using CarBook.Application.Features.Contacts.Handlers.Write;
 using CarBook.Application.Interfaces;
 using CarBook.Application.Interfaces.CarInterfaces;
 using CarBook.Persistence.Context;
@@ -61,6 +63,12 @@ namespace CarBook.WebApi
             builder.Services.AddScoped<CreateCategoryCommandHandler>();
             builder.Services.AddScoped<UpdateCategoryCommandHandler>();
             builder.Services.AddScoped<RemoveCategoryCommandHandler>();
+
+            builder.Services.AddScoped<GetContactByIdQueryHandler>();
+            builder.Services.AddScoped<GetContactQueryHandler>();
+            builder.Services.AddScoped<CreateContactCommandHandler>();
+            builder.Services.AddScoped<UpdateContactCommandHandler>();
+            builder.Services.AddScoped<RemoveContactCommandHandler>();
 
 
 
