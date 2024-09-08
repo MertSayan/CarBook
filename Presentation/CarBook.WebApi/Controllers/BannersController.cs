@@ -1,8 +1,8 @@
-﻿using CarBook.Application.Features.Banners.Commands;
-using CarBook.Application.Features.Banners.Handlers.Read;
-using CarBook.Application.Features.Banners.Handlers.Write;
-using CarBook.Application.Features.Banners.Queries;
-using Microsoft.AspNetCore.Http;
+﻿
+using CarBook.Application.Features.CQRS.Banners.Commands;
+using CarBook.Application.Features.CQRS.Banners.Handlers.Read;
+using CarBook.Application.Features.CQRS.Banners.Handlers.Write;
+using CarBook.Application.Features.CQRS.Banners.Queries;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarBook.WebApi.Controllers

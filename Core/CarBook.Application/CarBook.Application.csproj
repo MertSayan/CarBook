@@ -7,17 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Features\CarDescription\" />
-    <Folder Include="Features\CarFeature\" />
-    <Folder Include="Features\CarPricing\" />
-    <Folder Include="Features\Entity\" />
-    <Folder Include="Features\Feature\" />
-    <Folder Include="Features\FooterAdress\" />
-    <Folder Include="Features\Testimonial\" />
-    <Folder Include="Features\Services\" />
-    <Folder Include="Features\SocialMedia\" />
-    <Folder Include="Features\NewFolder4\" />
-    <Folder Include="Features\Location\" />
+    <PackageReference Include="MediatR" Version="12.4.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>

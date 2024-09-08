@@ -1,10 +1,7 @@
-﻿
-using CarBook.Application.Features.Banners.Queries;
-using CarBook.Application.Features.Brands.Commands;
-using CarBook.Application.Features.Brands.Handlers.Read;
-using CarBook.Application.Features.Brands.Handlers.Write;
-using CarBook.Application.Features.Brands.Queries;
-using Microsoft.AspNetCore.Http;
+﻿using CarBook.Application.Features.CQRS.Brands.Commands;
+using CarBook.Application.Features.CQRS.Brands.Handlers.Read;
+using CarBook.Application.Features.CQRS.Brands.Handlers.Write;
+using CarBook.Application.Features.CQRS.Brands.Queries;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarBook.WebApi.Controllers

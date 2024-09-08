@@ -1,19 +1,20 @@
 
 using CarBook.Application.BaseHandler;
-using CarBook.Application.Features.Abouts.Handlers.Read;
-using CarBook.Application.Features.Abouts.Handlers.Write;
-using CarBook.Application.Features.Banners.Handlers.Read;
-using CarBook.Application.Features.Banners.Handlers.Write;
-using CarBook.Application.Features.Brands.Handlers.Read;
-using CarBook.Application.Features.Brands.Handlers.Write;
-using CarBook.Application.Features.Cars.Handlers.Read;
-using CarBook.Application.Features.Cars.Handlers.Write;
-using CarBook.Application.Features.Categories.Handlers.Read;
-using CarBook.Application.Features.Categories.Handlers.Write;
-using CarBook.Application.Features.Contacts.Handlers.Read;
-using CarBook.Application.Features.Contacts.Handlers.Write;
+using CarBook.Application.Features.CQRS.Abouts.Handlers.Read;
+using CarBook.Application.Features.CQRS.Abouts.Handlers.Write;
+using CarBook.Application.Features.CQRS.Banners.Handlers.Read;
+using CarBook.Application.Features.CQRS.Banners.Handlers.Write;
+using CarBook.Application.Features.CQRS.Brands.Handlers.Read;
+using CarBook.Application.Features.CQRS.Brands.Handlers.Write;
+using CarBook.Application.Features.CQRS.Cars.Handlers.Read;
+using CarBook.Application.Features.CQRS.Cars.Handlers.Write;
+using CarBook.Application.Features.CQRS.Categories.Handlers.Read;
+using CarBook.Application.Features.CQRS.Categories.Handlers.Write;
+using CarBook.Application.Features.CQRS.Contacts.Handlers.Read;
+using CarBook.Application.Features.CQRS.Contacts.Handlers.Write;
 using CarBook.Application.Interfaces;
 using CarBook.Application.Interfaces.CarInterfaces;
+using CarBook.Application.Services;
 using CarBook.Persistence.Context;
 using CarBook.Persistence.Repositories;
 using CarBook.Persistence.Repositories.CarRepositories;
@@ -69,6 +70,9 @@ namespace CarBook.WebApi
             builder.Services.AddScoped<CreateContactCommandHandler>();
             builder.Services.AddScoped<UpdateContactCommandHandler>();
             builder.Services.AddScoped<RemoveContactCommandHandler>();
+
+
+            builder.Services.AddSaveApplicationService(builder.Configuration);
 
 
 

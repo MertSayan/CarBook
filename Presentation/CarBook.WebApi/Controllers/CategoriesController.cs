@@ -1,9 +1,7 @@
-﻿
-using CarBook.Application.Features.Categories.Command;
-using CarBook.Application.Features.Categories.Handlers.Read;
-using CarBook.Application.Features.Categories.Handlers.Write;
-using CarBook.Application.Features.Categories.Queries;
-using Microsoft.AspNetCore.Http;
+﻿using CarBook.Application.Features.CQRS.Categories.Command;
+using CarBook.Application.Features.CQRS.Categories.Handlers.Read;
+using CarBook.Application.Features.CQRS.Categories.Handlers.Write;
+using CarBook.Application.Features.CQRS.Categories.Queries;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarBook.WebApi.Controllers

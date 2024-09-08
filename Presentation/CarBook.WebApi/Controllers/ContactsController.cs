@@ -1,9 +1,7 @@
-﻿
-using CarBook.Application.Features.Contacts.Commands;
-using CarBook.Application.Features.Contacts.Handlers.Read;
-using CarBook.Application.Features.Contacts.Handlers.Write;
-using CarBook.Application.Features.Contacts.Queries;
-using Microsoft.AspNetCore.Http;
+﻿using CarBook.Application.Features.CQRS.Contacts.Commands;
+using CarBook.Application.Features.CQRS.Contacts.Handlers.Read;
+using CarBook.Application.Features.CQRS.Contacts.Handlers.Write;
+using CarBook.Application.Features.CQRS.Contacts.Queries;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarBook.WebApi.Controllers
