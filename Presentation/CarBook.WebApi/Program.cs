@@ -54,7 +54,7 @@ namespace CarBook.WebApi
             builder.Services.AddScoped<CreateCarCommandHandler>();
             builder.Services.AddScoped<UpdateCarCommandHandler>();
             builder.Services.AddScoped<RemoveCarCommendHandler>();
-
+            builder.Services.AddScoped<GetLast5CarsWithBrandQueryHandler>();
             builder.Services.AddScoped<GetCarWithBrandQueryHandler>();
 
             builder.Services.AddScoped<GetCategoryByIdQueryHandler>();
