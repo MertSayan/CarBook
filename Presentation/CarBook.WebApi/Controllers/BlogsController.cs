@@ -45,8 +45,8 @@ namespace CarBook.WebApi.Controllers
             {
                 CoverImageUrl = command.CoverImageUrl,
                 AuthorId = command.AuthorId,
-                BlogId=id,
-                CategoryId=command.CategoryId,
+                BlogId = id,
+                CategoryId = command.CategoryId,
                 Title = command.Title
             };
             await _mediator.Send(value);
@@ -57,6 +57,13 @@ namespace CarBook.WebApi.Controllers
         {
             await _mediator.Send(new RemoveBlogCommand(id));
             return Ok("SocialMedia silindi");
+        }
+
+        [HttpGet("GetLast3BlogsWithAuthorsQuery")]
+        public async Task<IActionResult> GetLast3BlogsWithAuthorsQuery()
+        {
+            var values=await _mediator.Send(new GetLast3BlogsWithAuthorsQuery());
+            return Ok(values);
         }
     }
 }

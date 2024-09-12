@@ -11,10 +11,12 @@ using CarBook.Application.Features.CQRS.Categories.Handlers.Write;
 using CarBook.Application.Features.CQRS.Contacts.Handlers.Read;
 using CarBook.Application.Features.CQRS.Contacts.Handlers.Write;
 using CarBook.Application.Interfaces;
+using CarBook.Application.Interfaces.BlogInterfaces;
 using CarBook.Application.Interfaces.CarInterfaces;
 using CarBook.Application.Servicess;
 using CarBook.Persistence.Context;
 using CarBook.Persistence.Repositories;
+using CarBook.Persistence.Repositories.BlogRepositories;
 using CarBook.Persistence.Repositories.CarRepositories;
 
 namespace CarBook.WebApi
@@ -29,6 +31,7 @@ namespace CarBook.WebApi
             builder.Services.AddScoped<CarBookContext>();
             builder.Services.AddScoped(typeof(IRepository<>),typeof(Repository<>)); 
             builder.Services.AddScoped(typeof(ICarRepository),typeof(CarRepository)); 
+            builder.Services.AddScoped(typeof(IBlogRepository),typeof(BlogRepository)); 
 
 
             builder.Services.AddScoped<GetAboutQueryHandler>();
