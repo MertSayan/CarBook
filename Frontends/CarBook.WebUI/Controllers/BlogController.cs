@@ -2,6 +2,7 @@
 using CarBook.Dto.CarPricingDtos;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System.Security.Cryptography.X509Certificates;
 
 namespace CarBook.WebUI.Controllers
 {
@@ -26,6 +27,14 @@ namespace CarBook.WebUI.Controllers
 				var values = JsonConvert.DeserializeObject<List<ResultAllBlogsWithAuthorDto>>(jsonData);
 				return View(values);
 			}
+			return View();
+
+
+		}
+		public async Task<IActionResult> BlogDetail(int id)
+		{
+			ViewBag.v1 = "Bloglar";
+			ViewBag.v2 = "Blog Detayı ve yorumlar";
 			return View();
 		}
 	}
