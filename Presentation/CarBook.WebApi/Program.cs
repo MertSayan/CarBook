@@ -63,11 +63,7 @@ namespace CarBook.WebApi
             builder.Services.AddScoped<GetLast5CarsWithBrandQueryHandler>();
             builder.Services.AddScoped<GetCarWithBrandQueryHandler>();
 
-            builder.Services.AddScoped<GetCategoryByIdQueryHandler>();
-            builder.Services.AddScoped<GetCategoryQueryHandler>();
-            builder.Services.AddScoped<CreateCategoryCommandHandler>();
-            builder.Services.AddScoped<UpdateCategoryCommandHandler>();
-            builder.Services.AddScoped<RemoveCategoryCommandHandler>();
+            
 
             builder.Services.AddScoped<GetContactByIdQueryHandler>();
             builder.Services.AddScoped<GetContactQueryHandler>();
@@ -76,7 +72,14 @@ namespace CarBook.WebApi
             builder.Services.AddScoped<RemoveContactCommandHandler>();
 
 
-            builder.Services.AddSaveApplicationService(builder.Configuration);
+			builder.Services.AddScoped<GetCategoryByIdQueryHandler>();
+			builder.Services.AddScoped<GetCategoryQueryHandler>();
+			builder.Services.AddScoped<CreateCategoryCommandHandler>();
+			builder.Services.AddScoped<UpdateCategoryCommandHandler>();
+			builder.Services.AddScoped<RemoveCategoryCommandHandler>();
+
+
+			builder.Services.AddSaveApplicationService(builder.Configuration);
 
 
 

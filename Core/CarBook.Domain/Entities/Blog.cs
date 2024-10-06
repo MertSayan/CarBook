@@ -15,5 +15,6 @@ namespace CarBook.Domain.Entities
         public string CoverImageUrl { get; set; }
         public int CategoryId { get; set; }
         public Category Category { get; set; }
+        public string? Description { get; set; }
     }
 }

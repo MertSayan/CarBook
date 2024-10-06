@@ -59,11 +59,18 @@ namespace CarBook.WebApi.Controllers
             return Ok("SocialMedia silindi");
         }
 
-        [HttpGet("GetLast3BlogsWithAuthorsQuery")]
-        public async Task<IActionResult> GetLast3BlogsWithAuthorsQuery()
+        [HttpGet("GetLast3BlogsWithAuthorsList")]
+        public async Task<IActionResult> GetLast3BlogsWithAuthorsList()
         {
             var values=await _mediator.Send(new GetLast3BlogsWithAuthorsQuery());
             return Ok(values);
         }
-    }
+
+		[HttpGet("GetAllBlogsWithAuthorList")]
+		public async Task<IActionResult> GetAllBlogsWithAuthorList()
+		{
+			var values = await _mediator.Send(new GetAllBlogsWithAuthorQuery());
+			return Ok(values);
+		}
+	}
 }
