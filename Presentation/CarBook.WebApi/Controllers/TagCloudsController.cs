@@ -56,5 +56,12 @@ namespace CarBook.WebApi.Controllers
             await _mediator.Send(new RemoveTagCloudCommend(id));
             return Ok("Etiket bulutu silindi");
         }
+
+        [HttpGet("GetTagCloudByBlogId")]
+        public async Task<ActionResult> GetTagCloudByBlogId(int id)
+        {
+            var values=await _mediator.Send(new GetTagCloudByBlogIdQuery(id));
+            return Ok(values);
+        }
     }
 }
