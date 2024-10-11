@@ -46,7 +46,18 @@ namespace CarBook.Persistence.Repositories
 
         public async Task RemoveAsync(T entity)
         {
-            entity.DeletedDate = DateTime.Now;
+            if (entity is Car)
+            {
+                _context.Set<T>().Remove(entity);
+            }
+            else
+            {
+                entity.DeletedDate = DateTime.Now;
+            }
+            //_context.Set<T>().Remove(entity);
+ 
+            ////entity.DeletedDate = DateTime.Now;
+               
             await _context.SaveChangesAsync();
         }
 

@@ -55,12 +55,14 @@ namespace CarBook.WebApi.Controllers
             await _createCarCommandHandler.Handle(command);
             return Ok("Car basariyla oluşturuldu");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> RemoveCar(int id)
         {
             await _removeCarCommandHandler.Handle(new RemoveCarCommand(id));
             return Ok("Car basariyla silindi");
         }
+
+        
         [HttpPut]
         public async Task<IActionResult> UpdateCar(UpdateCarCommand command, int id)
         {
@@ -80,6 +82,8 @@ namespace CarBook.WebApi.Controllers
             var values = await _getLast5CarsWithBrandQueryHandler.Handle();
             return Ok(values);
         }
+
+
 
 
     }
