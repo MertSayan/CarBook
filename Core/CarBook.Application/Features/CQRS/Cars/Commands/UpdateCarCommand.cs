@@ -8,6 +8,7 @@ namespace CarBook.Application.Features.CQRS.Cars.Commands
 {
     public class UpdateCarCommand
     {
+        public int CarId { get; set; } 
         public int BrandId { get; set; }
         public string Model { get; set; }
         public string CoverImageUrl { get; set; }

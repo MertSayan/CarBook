@@ -16,9 +16,9 @@ namespace CarBook.Application.Features.CQRS.Cars.Handlers.Write
         {
         }
 
-        public async Task Handle(UpdateCarCommand command, int id)
+        public async Task Handle(UpdateCarCommand command)
         {
-            var value = await _repository.GetByIdAsync(id);
+            var value = await _repository.GetByIdAsync(command.CarId);
             value.Fuel = command.Fuel;
             value.Transmission = command.Transmission;
             value.BigImageUrl = command.BigImageUrl;

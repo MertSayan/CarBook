@@ -64,9 +64,9 @@ namespace CarBook.WebApi.Controllers
 
         
         [HttpPut]
-        public async Task<IActionResult> UpdateCar(UpdateCarCommand command, int id)
+        public async Task<IActionResult> UpdateCar(UpdateCarCommand command)
         {
-            await _updateCarCommandHandler.Handle(command, id);
+            await _updateCarCommandHandler.Handle(command);
             return Ok("Car basariyla güncellendi");
         }
         [HttpGet("brand")]
