@@ -55,9 +55,9 @@ namespace CarBook.WebApi.Controllers
             return Ok("Brand basariyla silindi");
         }
         [HttpPut]
-        public async Task<IActionResult> UpdateBrand(UpdateBrandCommand command, int id)
+        public async Task<IActionResult> UpdateBrand(UpdateBrandCommand command)
         {
-            await _updateBrandCommandHandler.Handle(command, id);
+            await _updateBrandCommandHandler.Handle(command);
             return Ok("Brand basariyla güncellendi");
         }
     }

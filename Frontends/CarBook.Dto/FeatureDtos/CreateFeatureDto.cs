@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarBook.Application.Features.CQRS.Brands.Commands
+namespace CarBook.Dto.FeatureDtos
 {
-    public class UpdateBrandCommand
+    public class CreateFeatureDto
     {
-        public int BrandId { get; set; }
         public string Name { get; set; }
     }
 }
