@@ -8,6 +8,7 @@ namespace CarBook.Application.Features.CQRS.Banners.Commands
 {
     public class UpdateBannerCommand
     {
+        public int BannerId { get; set; } 
         public string Title { get; set; }
         public string Description { get; set; }
         public string VideoDescription { get; set; }

@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarBook.Application.Features.CQRS.Categories.Command
+namespace CarBook.Dto.CategoryDtos
 {
-    public class UpdateCategoryCommand
+    public class UpdateCategoryDto
     {
         public int CategoryId { get; set; }
         public string Name { get; set; }
+
     }
 }

@@ -16,9 +16,9 @@ namespace CarBook.Application.Features.CQRS.Categories.Handlers.Write
         {
         }
 
-        public async Task Handle(UpdateCategoryCommand command, int id)
+        public async Task Handle(UpdateCategoryCommand command)
         {
-            var value = await _repository.GetByIdAsync(id);
+            var value = await _repository.GetByIdAsync(command.CategoryId);
             value.Name = command.Name;
             await _repository.UpdateAsync(value);
         }

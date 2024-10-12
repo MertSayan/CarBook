@@ -56,9 +56,9 @@ namespace CarBook.WebApi.Controllers
             return Ok("Banner basariyla silindi");
         }
         [HttpPut]
-        public async Task<IActionResult> UpdateBanner(UpdateBannerCommand command,int id)
+        public async Task<IActionResult> UpdateBanner(UpdateBannerCommand command)
         {
-            await _updateBannerCommandHandler.Handle(command,id);
+            await _updateBannerCommandHandler.Handle(command);
             return Ok("Banner basariyla güncellendi");
         }
     }

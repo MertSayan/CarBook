@@ -39,16 +39,9 @@ namespace CarBook.WebApi.Controllers
             return Ok("Author eklendi");
         }
         [HttpPut]
-        public async Task<IActionResult> UpdateAuthor(UpdateAuthorCommandDTO command, int id)
+        public async Task<IActionResult> UpdateAuthor(UpdateAuthorCommand command)
         {
-            var value = new UpdateAuthorCommand
-            {
-                Name = command.Name,
-                ImageUrl = command.ImageUrl,
-                AuthorId = id,
-                Description=command.Description,
-            };
-            await _mediator.Send(value);
+            await _mediator.Send(command);
             return Ok("Author güncellendi");
         }
         [HttpDelete]

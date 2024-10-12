@@ -55,9 +55,9 @@ namespace CarBook.WebApi.Controllers
             return Ok("Category basariyla silindi");
         }
         [HttpPut]
-        public async Task<IActionResult> UpdateCategory(UpdateCategoryCommand command, int id)
+        public async Task<IActionResult> UpdateCategory(UpdateCategoryCommand command)
         {
-            await _updateCategoryCommandHandler.Handle(command, id);
+            await _updateCategoryCommandHandler.Handle(command);
             return Ok("Category basariyla güncellendi");
         }
     }
