@@ -11,7 +11,7 @@ namespace CarBook.WebApi.Controllers
     {
         private readonly IMediator _mediator;
 
-        public PricingsController(IMediator mediator)
+         public PricingsController(IMediator mediator)
         {
             _mediator = mediator;
         }
@@ -36,14 +36,10 @@ namespace CarBook.WebApi.Controllers
             return Ok("Ödeme türü eklendi");
         }
         [HttpPut]
-        public async Task<IActionResult> UpdatePricing(UpdatePricingCommandDTO command, int id)
+        public async Task<IActionResult> UpdatePricing(UpdatePricingCommand command)
         {
-            var value = new UpdatePricingCommand
-            {
-                PricingId = id,
-                Name = command.Name,
-            };
-            await _mediator.Send(value);
+            
+            await _mediator.Send(command);
             return Ok("Ödeme türü güncellendi");
         }
         [HttpDelete]

@@ -2,11 +2,6 @@
 using CarBook.Domain.Entities;
 using CarBook.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CarBook.Persistence.Repositories
 {
@@ -46,7 +41,7 @@ namespace CarBook.Persistence.Repositories
 
         public async Task RemoveAsync(T entity)
         {
-            if (entity is Car)
+            if (entity is Car /*|| entity is Blog*/)
             {
                 _context.Set<T>().Remove(entity);
             }
@@ -55,8 +50,11 @@ namespace CarBook.Persistence.Repositories
                 entity.DeletedDate = DateTime.Now;
             }
             //_context.Set<T>().Remove(entity);
- 
+
             ////entity.DeletedDate = DateTime.Now;
+            
+
+            //_context.Set<T>().Remove(entity);
                
             await _context.SaveChangesAsync();
         }

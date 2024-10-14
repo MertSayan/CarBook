@@ -21,7 +21,7 @@ namespace CarBook.Persistence.Repositories.BlogRepositories
 
 		public async Task<List<Blog>> GetAllBlogsWithAuthors()
 		{
-			var values= _carbookContext.Blogs.Include(x=>x.Author).OrderByDescending(x => x.BlogId).ToList();
+			var values= _carbookContext.Blogs.Include(x=>x.Author).OrderByDescending(x => x.BlogId).Where(e => e.DeletedDate == null).ToList();
             return values;
 		}
 
