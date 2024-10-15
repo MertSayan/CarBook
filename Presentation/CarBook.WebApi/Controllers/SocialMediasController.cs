@@ -36,16 +36,10 @@ namespace CarBook.WebApi.Controllers
             return Ok("SocialMedia eklendi");
         }
         [HttpPut]
-        public async Task<IActionResult> UpdateSocialMedia(UpdateSocialMediaCommandDTO command, int id)
+        public async Task<IActionResult> UpdateSocialMedia(UpdateSocialMediaCommand command)
         {
-            var value = new UpdateSocialMediaCommand
-            {
-                SocialMediaId = id,
-                IconUrl = command.IconUrl,
-                Name = command.Name,
-                Url = command.Url
-            };
-            await _mediator.Send(value);
+            
+            await _mediator.Send(command);
             return Ok("SocialMedia güncellendi");
         }
         [HttpDelete]

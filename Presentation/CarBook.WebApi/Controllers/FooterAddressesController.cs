@@ -38,17 +38,9 @@ namespace CarBook.WebApi.Controllers
             return Ok("Alt adres eklendi");
         }
         [HttpPut]
-        public async Task<IActionResult> UpdateFooterAddress(UpdateFooterAddressComandDTO command,int id)
+        public async Task<IActionResult> UpdateFooterAddress(UpdateFooterAddressCommand command)
         {
-            var value = new UpdateFooterAddressCommand
-            {
-                Address = command.Address,
-                Description = command.Description,
-                Email = command.Email,
-                Phone = command.Phone,
-                FooterAdressId = id
-            };
-            await _mediator.Send(value);
+            await _mediator.Send(command);
             return Ok("Alt adres güncellendi");
         }
         [HttpDelete]

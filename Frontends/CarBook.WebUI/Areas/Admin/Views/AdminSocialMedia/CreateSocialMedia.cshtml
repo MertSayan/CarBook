@@ -1,0 +1,45 @@
+﻿@model CreateSocialMediaDto
+
+@{
+    ViewData["Title"] = "CreateSocialMedia";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-xl-12">
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <h4 class="card-title">Hizmet veri girişi alanı</h4>
+                        <p class="card-subtitle mb-4">
+                            Kullandığınız sosyal medya hesaplarına ait bilgileri yönetebileceğiniz sayfadır.
+                        </p>
+
+                        <form method="post">
+                            <div class="form-group">
+                                <label for="exampleInputName">Sosyal Medya İsmi </label>
+                                <input type="text" class="form-control" id="exampleInputName" asp-for="Name" placeholder="Hizmet başlığını giriniz">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputUrl">Sosyal medya linki</label>
+                                <input type="text" class="form-control" id="exampleInputUrl" asp-for="Url" placeholder="Social medya linkini giriniz">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputIconUrl">Sosyal Medya İkon URL</label>
+                                <input type="text" class="form-control" id="exampleInputIconUrl" asp-for="IconUrl" placeholder="Social Media icon bilgisini giriniz">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Sosyal medya bilgisini kaydet</button>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

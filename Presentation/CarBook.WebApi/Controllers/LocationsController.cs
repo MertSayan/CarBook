@@ -39,14 +39,10 @@ namespace CarBook.WebApi.Controllers
             return Ok("Alt adres eklendi");
         }
         [HttpPut]
-        public async Task<IActionResult> UpdateLocation(UpdateLocationCommandDTO command, int id)
+        public async Task<IActionResult> UpdateLocation(UpdateLocationCommand command)
         {
-            var value = new UpdateLocationCommand
-            {
-                LocationId = id,
-                Name=command.Name,
-            };
-            await _mediator.Send(value);
+            
+            await _mediator.Send(command);
             return Ok("Alt adres güncellendi");
         }
         [HttpDelete]

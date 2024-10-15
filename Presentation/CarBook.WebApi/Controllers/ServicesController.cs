@@ -36,16 +36,10 @@ namespace CarBook.WebApi.Controllers
             return Ok("Hizmet eklendi");
         }
         [HttpPut]
-        public async Task<IActionResult> UpdateService(UpdateServiceCommanDTO command, int id)
+        public async Task<IActionResult> UpdateService(UpdateServiceCommand command)
         {
-            var value = new UpdateServiceCommand
-            {
-                ServiceId = id,
-                Title = command.Title,
-                Description = command.Description,
-                IconUrl = command.IconUrl
-            };
-            await _mediator.Send(value);
+           
+            await _mediator.Send(command);
             return Ok("Hizmet güncellendi");
         }
         [HttpDelete]

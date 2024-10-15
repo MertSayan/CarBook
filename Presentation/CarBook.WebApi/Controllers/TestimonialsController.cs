@@ -39,17 +39,9 @@ namespace CarBook.WebApi.Controllers
             return Ok("Testimonial eklendi");
         }
         [HttpPut]
-        public async Task<IActionResult> UpdateTestimonial(UpdateTestimonialCommandDTO command, int id)
+        public async Task<IActionResult> UpdateTestimonial(UpdateTestimonialCommand command)
         {
-            var value = new UpdateTestimonialCommand
-            {
-                TestimonialId = id,
-                ImageUrl = command.ImageUrl,
-                Name = command.Name,
-                Comment = command.Comment,
-                Title = command.Title
-            };
-            await _mediator.Send(value);
+            await _mediator.Send(command);
             return Ok("Testimonial güncellendi");
         }
         [HttpDelete]
