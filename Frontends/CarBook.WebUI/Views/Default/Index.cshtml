@@ -4,6 +4,12 @@
     Layout = null;
 }
 
+<style>
+    #drop option{
+        color:black;
+    }
+</style>
+
 <!DOCTYPE html>
 <html lang="en">
 @await Component.InvokeAsync("_HeadUILayoutComponentPartial")
@@ -22,7 +28,7 @@
                                 <h2>Şimdi Aracınızı Kiralayın</h2>
                                 <div class="form-group">
                                     <label for="" class="label">Alınacak Lokasyon</label>
-                                    @Html.DropDownListFor(x => x.LocationId, (List<SelectListItem>)ViewBag.V, new { @class = "form-control; color:black", name = "locationId " })
+                                    @Html.DropDownListFor(x => x.LocationId, (List<SelectListItem>)ViewBag.V, new { @class = "form-control1",@id="drop"})
                                 </div>
 
                                 <div class="d-flex">
@@ -77,7 +83,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <p><a href="#" class="btn btn-primary py-3 px-4">Reserve Your Perfect Car</a></p>
+                                <p><a href="/CarPricing/Index/" class="btn btn-primary py-3 px-4">Araç Fiyat Listemizi Görün</a></p>
                             </div>
                         </div>
                     </div>
