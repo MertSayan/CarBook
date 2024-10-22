@@ -14,6 +14,6 @@ namespace CarBook.Application.Features.Mediator.CarPricings.Results
 		public decimal MonthlyAmount { get; set; }
 
 		public string CoverImageUrl { get; set; }
-		public string BrandName { get; set; }
+		public string Brand { get; set; }
 	}
 }
