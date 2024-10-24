@@ -2,6 +2,7 @@
 using CarBook.Domain.Entities;
 using CarBook.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace CarBook.Persistence.Repositories
 {
@@ -29,7 +30,12 @@ namespace CarBook.Persistence.Repositories
                              .ToListAsync();
         }
 
-        public async Task<T> GetByIdAsync(int id)
+		public async Task<T?> GetByFilterAsync(Expression<Func<T, bool>> filter)
+		{
+			return await _context.Set<T>().SingleOrDefaultAsync(filter);
+		}
+
+		public async Task<T> GetByIdAsync(int id)
         {
             var entity = await _context.Set<T>().FindAsync(id);
             if(entity!=null && entity.DeletedDate == null)
