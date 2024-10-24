@@ -17,6 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Features\Mediator\CarDescriptions\Commands\" />
+    <Folder Include="Features\Mediator\CarDescriptions\Handlers\Write\" />
     <Folder Include="Features\Mediator\CarFeatures\Handlers\Read\" />
     <Folder Include="Features\Mediator\Comments\Handlers\Read\" />
   </ItemGroup>

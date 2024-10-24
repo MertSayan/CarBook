@@ -1,11 +1,12 @@
-﻿using CarBook.Dto.LocationDtos;
+﻿using CarBook.Dto.CarDescriptionDtos;
+using CarBook.Dto.LocationDtos;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Text;
 
 namespace CarBook.WebUI.Areas.Admin.Controllers
 {
-    [Area("Admin")]
+	[Area("Admin")]
     [Route("Admin/AdminLocation")]
     public class AdminLocationController : Controller
     {
@@ -17,14 +18,14 @@ namespace CarBook.WebUI.Areas.Admin.Controllers
         }
 
         [Route("Index")]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("https://localhost:7070/api/Locations");
+            var responseMessage = await client.GetAsync("https://localhost:7070/api/Descriptions?id="+id);
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<List<ResultLocationDto>>(jsonData);
+                var values = JsonConvert.DeserializeObject<ResultCarDescriptionByCarIdDto>(jsonData);
                 return View(values);
             }
 
